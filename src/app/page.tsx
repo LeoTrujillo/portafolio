@@ -1,10 +1,15 @@
-import HomeSection from "@/sections/Home";
+import HeroSection from "@/sections/Hero";
 import Layout from "@/components/Layout";
+import AboutSection from "@/sections/About";
+import ContactSection from "@/sections/Contact";
+
 
 export default function Home() {
   return (
     <Layout>
-      <HomeSection />
+      <HeroSection />
+      <AboutSection />
+      <ContactSection />
     </Layout>
   );
 }
