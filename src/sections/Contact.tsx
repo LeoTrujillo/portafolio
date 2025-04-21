@@ -1,6 +1,23 @@
+"use client";
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactSection: React.FC = () => {
+  const [state, handleSubmit] = useForm("xjkwbjew");
+
+  if (state.succeeded) {
+    return (
+      <section className="py-12 px-4 bg-[#0a1120]">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold mb-4 text-center text-white">Contacto</h2>
+          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            Gracias por contactarme. Te responderé lo antes posible.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-12 px-4 bg-[#0a1120]">
       <div className="container mx-auto max-w-4xl">
@@ -9,8 +26,7 @@ const ContactSection: React.FC = () => {
           Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarme.
         </p>
         <form 
-          action="https://formspree.io/f/leonardotrujillor@gmail.com" 
-          method="POST"
+          onSubmit={handleSubmit}
           className="space-y-6 max-w-xl mx-auto bg-[#0f172a]/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-800"
         >
           <div className="space-y-2">
@@ -34,6 +50,11 @@ const ContactSection: React.FC = () => {
               required 
               className="w-full px-4 py-3 rounded-lg bg-[#1e293b] border-2 border-gray-700 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 outline-none"
             />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
           </div>
           <div className="space-y-2">
             <label htmlFor="message" className="block text-sm font-medium text-gray-300">Mensaje</label>
@@ -46,9 +67,16 @@ const ContactSection: React.FC = () => {
               className="w-full px-4 py-3 rounded-lg bg-[#1e293b] border-2 border-gray-700 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 outline-none resize-none"
             />
           </div>
+          <ValidationError 
+            prefix="Message" 
+            field="message"
+            errors={state.errors} 
+          />
+          <div className="g-recaptcha" data-sitekey="6Lc6AyArAAAAADII9iX9hA_6ArXSmtVGEOrL40Sb" />
           <button 
             type="submit" 
             className="group relative w-full bg-blue-600 text-white font-medium py-3 px-6 rounded-lg overflow-hidden transition-all duration-300"
+            disabled={state.submitting}
           >
             <div className="absolute inset-0 w-0 bg-blue-500 transition-all duration-300 ease-out group-hover:w-full"></div>
             <span className="relative flex items-center justify-center gap-2">
