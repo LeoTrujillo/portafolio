@@ -3,11 +3,11 @@ import React from "react";
 const HeroSection: React.FC = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold">
+      <div className="container mx-auto px-4">
+        <h1 className="font-display text-4xl md:text-6xl font-bold">
           Leonardo Trujillo
         </h1>
-      <p className="mt-4 text-xl md:text-2xl">
+      <p className="font-sans mt-4 text-xl md:text-2xl">
         Frontend Developer con +15 años de experiencia construyendo apps web y móviles usando React, Angular y más.
       </p>
       <div className="mt-6 flex gap-4">

@@ -3,7 +3,7 @@ import React from "react";
 const AboutSection: React.FC = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <p>
           Soy desarrollador frontend con más de 15 años de experiencia creando experiencias web y móviles centradas en el usuario.
           He trabajado con tecnologías como <strong>React, React Native, AngularJS, Remix</strong> y otras herramientas modernas para

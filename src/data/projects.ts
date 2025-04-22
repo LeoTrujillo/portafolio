@@ -1,10 +1,16 @@
 export const projects = [
   {
-    title: "App de Reservaciones",
-    description: "Aplicación móvil para una cadena hotelera con React Native.",
-    tech: ["React Native", "TypeScript", "Redux"],
-    image: "/images/reservaciones.png",
-    link: "https://github.com/LeoTrujillo",
+    title: "Drivalbe",
+    description: "Aplicación para compra de boletos para viajes",
+    tech: ["React Native", "TypeScript", "Redux", "React", "Next", "Remix", "NestJS", "PostgreSQL"],
+    image: "/images/projects/drivalbe.png",
+    link: "https://drivalbe.com/",
   },
-  // Más proyectos...
+  {
+    title: "Red Clecal",
+    description: "Plataforma para el registro y automatización de citas compradores, proveedores y landing page",
+    tech: ["React", "TypeScript", "Inertia", "PHP", "Laravel", "MySQL"],
+    image: "/images/projects/redclelac.png",
+    link: "https://red.clelac.com/",
+  }
 ];
