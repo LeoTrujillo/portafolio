@@ -1,9 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiAngular, SiNestjs, SiPhp, SiMysql, SiMongodb, SiPostgresql } from "react-icons/si";
+import { useTheme } from "next-themes";
 
 const AboutSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const icons = [
     { icon: SiReact, name: "React" },
     { icon: SiNextdotjs, name: "Next.js" },
@@ -25,13 +33,15 @@ const AboutSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [icons.length]);
 
+  if (!mounted) return null;
+
   return (
-    <section className="py-16">
+    <section className="py-16 transition-colors duration-300">
       <div className="container mx-auto px-4">
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-lg md:text-xl dark:text-gray-300 text-primary-light leading-relaxed font-medium">
           Soy desarrollador frontend con más de 15 años de trayectoria en el desarrollo de aplicaciones web y móviles. Me enfoco en construir experiencias centradas en el usuario, con especial atención a la performance, accesibilidad y escalabilidad.
         </p>
-        <p className="text-gray-400 mt-4 leading-relaxed">
+        <p className="text-base md:text-xl dark:text-gray-300 text-primary-light font-medium mt-6 leading-relaxed">
           He colaborado en productos de alto impacto utilizando tecnologías como React, React Native, AngularJS, Remix y NestJS. Me apasiona escribir código limpio, trabajar en equipo y estar en constante aprendizaje. Busco proyectos donde pueda aportar soluciones efectivas y seguir creciendo profesionalmente.
         </p>
       </div>
@@ -49,7 +59,7 @@ const AboutSection: React.FC = () => {
                 className="w-full flex-shrink-0 flex flex-col items-center justify-center px-4"
               >
                 <Icon size={48} className="text-cyan-400" />
-                <span className="text-sm text-gray-400 mt-2">{name}</span>
+                <span className="text-sm dark:text-gray-400 text-secondary-light mt-2 font-medium">{name}</span>
               </div>
             ))}
           </div>
@@ -59,7 +69,7 @@ const AboutSection: React.FC = () => {
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-cyan-400 w-4' : 'bg-gray-600'
+                index === currentIndex ? 'bg-cyan-400 w-4' : 'bg-gray-600 dark:bg-gray-600 bg-gray-300'
               }`}
               onClick={() => setCurrentIndex(index)}
             />
@@ -72,7 +82,7 @@ const AboutSection: React.FC = () => {
         {icons.map(({ icon: Icon, name }) => (
           <div key={name} className="flex flex-col items-center group">
             <Icon size={72} className="text-cyan-400 transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-sm text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-base dark:text-gray-400 text-secondary-light mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
               {name}
             </span>
           </div>

@@ -6,8 +6,19 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        primary: {
+          light: '#1a1a1a',
+          dark: '#ffffff'
+        },
+        secondary: {
+          light: '#4a4a4a',
+          dark: '#d1d1d1'
+        }
+      },
       keyframes: {
         'fade-in-up': {
           '0%': {

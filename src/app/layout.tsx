@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk  } from "next/font/google";
 // import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
@@ -44,7 +46,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
