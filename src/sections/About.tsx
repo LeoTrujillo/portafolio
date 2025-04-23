@@ -1,11 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiAngular, SiNestjs, SiPhp, SiMysql, SiMongodb, SiPostgresql } from "react-icons/si";
-import { useTheme } from "next-themes";
 
 const AboutSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
