@@ -1,16 +1,19 @@
+"use client";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
+import { useI18n } from "@/i18n/index";
 
 const HeroSection: React.FC = () => {
+  const { t } = useI18n();
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <h1 className="font-display text-4xl md:text-6xl font-bold">
-          Hola 👋🏼 soy Leo
+          {t('hero.greeting')}
         </h1>
         <p className="font-sans mt-4 text-xl md:text-2xl">
-          Frontend Developer especializado en crear interfaces web y móviles modernas con React, Angular y tecnologías afines.
+          {t('hero.description')}
         </p>
         <div className="mt-8 flex flex-col md:flex-row gap-4">
           <a 
@@ -21,7 +24,7 @@ const HeroSection: React.FC = () => {
           >
             <HiDocumentDownload className="text-2xl transition-transform group-hover:rotate-12" />
             <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-              Descargar CV
+              {t('hero.cv')}
             </span>
           </a>
           <a 
@@ -32,7 +35,7 @@ const HeroSection: React.FC = () => {
           >
             <FaGithub className="text-2xl transition-transform group-hover:scale-110" />
             <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-              GitHub
+              {t('hero.github')}
             </span>
           </a>
           <a 
@@ -43,7 +46,7 @@ const HeroSection: React.FC = () => {
           >
             <FaLinkedin className="text-2xl transition-transform group-hover:scale-110" />
             <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-              LinkedIn
+              {t('hero.linkedin')}
             </span>
           </a>
         </div>

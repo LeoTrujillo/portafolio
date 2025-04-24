@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiAngular, SiNestjs, SiPhp, SiMysql, SiMongodb, SiPostgresql } from "react-icons/si";
+import { useI18n } from "@/i18n/index";
 
 const AboutSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     setMounted(true);
@@ -37,10 +39,10 @@ const AboutSection: React.FC = () => {
     <section className="py-16 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <p className="text-lg md:text-xl dark:text-gray-300 text-primary-light leading-relaxed font-medium">
-          Soy desarrollador frontend con más de 15 años de trayectoria en el desarrollo de aplicaciones web y móviles. Me enfoco en construir experiencias centradas en el usuario, con especial atención a la performance, accesibilidad y escalabilidad.
+          {t('about.description1')}
         </p>
         <p className="text-base md:text-xl dark:text-gray-300 text-primary-light font-medium mt-6 leading-relaxed">
-          He colaborado en productos de alto impacto utilizando tecnologías como React, React Native, AngularJS, Remix y NestJS. Me apasiona escribir código limpio, trabajar en equipo y estar en constante aprendizaje. Busco proyectos donde pueda aportar soluciones efectivas y seguir creciendo profesionalmente.
+          {t('about.description2')}
         </p>
       </div>
       
