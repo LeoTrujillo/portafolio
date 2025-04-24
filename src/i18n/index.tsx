@@ -4,7 +4,6 @@ import { es } from './locales/es';
 import { en } from './locales/en';
 
 type Language = 'es' | 'en';
-type Translations = typeof es;
 
 interface I18nContextType {
   language: Language;
@@ -23,15 +22,19 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
 
   const t = (key: string): string => {
-    const keys = key.split('.');
-    let value: any = translations[language];
-    
-    for (const k of keys) {
-      if (value === undefined) return key;
-      value = value[k];
+    try {
+      const keys = key.split('.');
+      let value: unknown = translations[language];
+      
+      for (const k of keys) {
+        if (value === undefined || typeof value !== 'object') return key;
+        value = (value as Record<string, unknown>)[k];
+      }
+      
+      return typeof value === 'string' ? value : key;
+    } catch {
+      return key;
     }
-    
-    return value || key;
   };
 
   const contextValue = { language, setLanguage, t };

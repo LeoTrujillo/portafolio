@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <section className="py-16 transition-colors duration-300">
+    <section className="pb-16 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <p className="text-lg md:text-xl dark:text-gray-300 text-primary-light leading-relaxed font-medium">
           {t('about.description1')}
