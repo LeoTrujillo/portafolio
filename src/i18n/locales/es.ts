@@ -6,8 +6,11 @@ export const es = {
     blog: "Blog"
   },
   hero: {
-    greeting: "Hola 👋🏼 soy Leo",
-    description: "Desarrollador Frontend especializado en crear interfaces web y móviles modernas con React, Angular y tecnologías relacionadas.",
+    greeting: {
+      base: "Hola 👋🏼 soy Leo un",
+      roles: ["Desarrollador Frontend", "Desarrollador Full Stack", "Desarrollador Móvil"]
+    },
+    description: "Soy desarrollador Frontend especializado en crear interfaces web y móviles modernas con React, Angular y tecnologías relacionadas.",
     cv: "Descargar CV",
     github: "GitHub",
     linkedin: "LinkedIn"

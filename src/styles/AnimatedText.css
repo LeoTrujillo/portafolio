@@ -1,0 +1,58 @@
+/* Importar Fira Code de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+.typewriter-text {
+  display: inline-flex;
+  align-items: center;
+  min-width: 1ch;
+  font-family: 'Fira Code', monospace;
+  font-size: inherit;
+  position: relative;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.typewriter-text span:first-child {
+  background: linear-gradient(120deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient 3s linear infinite;
+  font-weight: 500;
+  white-space: pre-wrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 2px;
+  background-color: currentColor;
+  animation: blink 0.7s step-end infinite;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .typewriter-text {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .typewriter-text span:first-child {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} 

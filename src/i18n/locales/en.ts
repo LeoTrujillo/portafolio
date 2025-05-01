@@ -6,8 +6,11 @@ export const en = {
     blog: "Blog"
   },
   hero: {
-    greeting: "Hi 👋🏼 I'm Leo",
-    description: "Frontend Developer specialized in creating modern web and mobile interfaces with React, Angular and related technologies.",
+    greeting: {
+      base: "Hi 👋🏼 I'm Leo a",
+      roles: ["Frontend Developer", "Full Stack Developer", "Mobile Developer"]
+    },
+    description: "I'm specialized in creating modern web and mobile interfaces with React, Angular and related technologies.",
     cv: "Download CV",
     github: "GitHub",
     linkedin: "LinkedIn"
