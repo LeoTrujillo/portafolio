@@ -33,7 +33,11 @@ module.exports = {
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards'
-      }
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'fira': ['Fira Code', 'monospace'],
+      },
     },
   },
   plugins: [],

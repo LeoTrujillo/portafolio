@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '@/styles/fonts.css';
 
 interface AnimatedTextProps {
   baseText: string;
@@ -63,11 +64,11 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ baseText, roles }) => {
 
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-      <span className="font-normal whitespace-nowrap">{baseText}</span>
-      <span className="typewriter-text">
-        <span>{text}</span>
+      <span className="font-normal font-poppins whitespace-nowrap">{baseText}</span>
+      <div className="typewriter-text">
+        <span className="role-text">{text}</span>
         <span className="cursor" />
-      </span>
+      </div>
     </div>
   );
 };

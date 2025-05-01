@@ -5,7 +5,6 @@
   display: inline-flex;
   align-items: center;
   min-width: 1ch;
-  font-family: 'Fira Code', monospace;
   font-size: inherit;
   position: relative;
   max-width: 100%;
@@ -13,7 +12,9 @@
   word-break: break-word;
 }
 
-.typewriter-text span:first-child {
+/* Aplicar Fira Code específicamente al texto de los roles */
+.role-text {
+  font-family: 'Fira Code', monospace !important;
   background: linear-gradient(120deg, #ff6b6b, #4ecdc4, #45b7d1, #96e6a1);
   background-size: 200% auto;
   color: transparent;
@@ -40,7 +41,7 @@
     line-height: 1.5;
   }
   
-  .typewriter-text span:first-child {
+  .role-text {
     display: inline-block;
     max-width: 100%;
   }
