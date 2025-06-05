@@ -52,6 +52,13 @@ export const en = {
         technologies: ["React Native", "TypeScript", "Redux"],
         image: "/images/projects/camino.png",
         projectUrl: "https://apps.apple.com/mx/app/camino-real-hoteles/id1658196886",
+      },
+      {
+        title: "Nutri Cal",
+        description: "Application for calculating and replace any food or ingredient",
+        technologies: ["React", "Remix", "TypeScript", "Jest", "Cypress", "TailwindCSS"],
+        image: "/images/projects/nutri.png",
+        projectUrl: "https://nutrition-calculator-eight.vercel.app/",
       }
     ]
   },
