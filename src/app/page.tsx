@@ -1,16 +1,21 @@
+import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/sections/Hero";
-import Layout from "@/components/Layout";
 import AboutSection from "@/sections/About";
-import ContactSection from "@/sections/Contact";
 import ProjectsSection from "@/sections/Projects";
+import TechnologiesSection from "@/sections/Technologies";
+import BlogSection from "@/sections/Blog";
+import FooterSection from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <Layout>
+    <main className="min-h-screen bg-white text-[color:var(--foreground)]">
+      <SiteHeader />
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <ContactSection />
-    </Layout>
+      <TechnologiesSection />
+      <BlogSection />
+      <FooterSection />
+    </main>
   );
 }

@@ -1,9 +1,7 @@
-import Projects from "@/sections/Projects";
-import Layout from "@/components/Layout";
 export default function Proyectos() {
   return (
-    <Layout>
-      <Projects />
-    </Layout>
+    <main className="min-h-screen bg-white text-black flex items-center justify-center text-3xl font-semibold">
+      Hola Mundo
+    </main>
   );
 }

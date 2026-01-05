@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins, Fira_Code } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import ThemeToggle from "@/components/ThemeToggle";
-import { I18nProvider } from "@/i18n/index";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-fira-code",
+});
 
 export const metadata: Metadata = {
-  title: "Leo Trujillo - Frontend Developer",
-  description: "Portfolio personal de Leo Trujillo, Frontend Developer con más de 15 años de experiencia",
+  title: "Leo Developer - Frontend",
+  description: "Portafolio base con seccion principal y estilos reutilizables.",
 };
 
 export default function RootLayout({
@@ -19,19 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <head>
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
-          />
-      </head>
-      <body className={inter.className}>
-        <I18nProvider>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            {children}
-            <ThemeToggle />
-          </ThemeProvider>
-        </I18nProvider>
+      <body className={`${poppins.variable} ${firaCode.variable} antialiased`}>
+        {children}
       </body>
     </html>
   );

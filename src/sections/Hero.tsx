@@ -1,90 +1,58 @@
-"use client";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiDocumentDownload } from "react-icons/hi";
-import { useI18n } from "@/i18n/index";
-import AnimatedText from "@/components/AnimatedText";
-import "@/styles/AnimatedText.css";
+import { FaDev, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import AvailabilityBadge from "@/components/AvailabilityBadge";
+import CodeCard from "@/components/CodeCard";
+import Container from "@/components/Container";
+import PrimaryButton from "@/components/PrimaryButton";
+import SecondaryButton from "@/components/SecondaryButton";
+import SocialIconLink from "@/components/SocialIconLink";
 
-const HeroSection: React.FC = () => {
-  const { t } = useI18n();
-  
-  const roles = [
-    "Frontend Developer",
-    "Full Stack Developer",
-    "Mobile Developer"
-  ];
-
+const HeroSection = () => {
   return (
-    <>
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="font-display text-4xl md:text-6xl font-bold">
-            <AnimatedText 
-              baseText={t('hero.greeting.base')}
-              roles={roles}
-            />
-          </h1>
-          <p className="font-sans mt-4 text-xl md:text-2xl">
-            {t('hero.description')}
-          </p>
-          <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <a 
-              href="/resume.pdf" 
-              target="_blank" 
-              className="btn inline-flex items-center justify-center gap-3 md:w-auto w-full bg-white text-black hover:bg-gray-100 md:bg-transparent md:text-white md:hover:bg-white/10 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up md:animate-none"
-              style={{ animationDelay: '0.1s' }}
-            >
-              <HiDocumentDownload className="text-2xl transition-transform group-hover:rotate-12" />
-              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                {t('hero.cv')}
-              </span>
-            </a>
-            <a 
-              href="https://github.com/LeoTrujillo" 
-              target="_blank" 
-              className="btn-outline inline-flex items-center justify-center gap-3 md:w-auto w-full bg-white text-black hover:bg-gray-100 md:bg-transparent md:text-white md:hover:bg-white/10 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up md:animate-none"
-              style={{ animationDelay: '0.2s' }}
-            >
-              <FaGithub className="text-2xl transition-transform group-hover:scale-110" />
-              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                {t('hero.github')}
-              </span>
-            </a>
-            <a 
-              href="https://linkedin.com/in/leonardo-trujillo-a868a712a" 
-              target="_blank" 
-              className="btn-outline inline-flex items-center justify-center gap-3 md:w-auto w-full bg-white text-black hover:bg-gray-100 md:bg-transparent md:text-white md:hover:bg-white/10 px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up md:animate-none"
-              style={{ animationDelay: '0.3s' }}
-            >
-              <FaLinkedin className="text-2xl transition-transform group-hover:scale-110" />
-              <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
-                {t('hero.linkedin')}
-              </span>
-            </a>
+    <section className="relative overflow-hidden bg-white">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#eef0ff_0%,transparent_55%),radial-gradient(circle_at_top_right,#f4f1ff_0%,transparent_45%)]" />
+        <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[color:var(--brand-100)] blur-3xl md:h-96 md:w-96" />
+      </div>
+      <Container className="relative py-10 sm:py-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-6">
+            <AvailabilityBadge label="Disponible para trabajar" />
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tight text-[color:var(--foreground)] sm:text-5xl lg:text-6xl">
+                Frontend Stack & Mobile Developer
+              </h1>
+              <p className="max-w-xl text-base text-[color:var(--muted)] sm:text-lg">
+                Creo experiencias web modernas, accesibles y escalables.
+                Especializado en React, Vue y tecnologías frontend de última
+                generación.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <PrimaryButton href="#proyectos">Ver proyectos</PrimaryButton>
+              <SecondaryButton href="#contacto">Hablemos</SecondaryButton>
+            </div>
+            <div className="flex items-center gap-3">
+              <SocialIconLink href="https://github.com" label="GitHub">
+                <FaGithub />
+              </SocialIconLink>
+              <SocialIconLink href="https://linkedin.com" label="LinkedIn">
+                <FaLinkedinIn />
+              </SocialIconLink>
+              <SocialIconLink href="https://twitter.com" label="Twitter">
+                <FaTwitter />
+              </SocialIconLink>
+              <SocialIconLink href="https://dev.to" label="Dev.to">
+                <FaDev />
+              </SocialIconLink>
+            </div>
+          </div>
+          <div className="w-full lg:justify-self-end">
+            <CodeCard />
           </div>
         </div>
-      </section>
-      <style jsx>{`
-        .typewriter {
-          display: inline-block;
-          overflow: hidden;
-          border-right: 2px solid currentColor;
-          white-space: nowrap;
-          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-          from { width: 0 }
-          to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-          from, to { border-color: transparent }
-          50% { border-color: currentColor }
-        }
-      `}</style>
-    </>
+      </Container>
+    </section>
   );
 };
 
