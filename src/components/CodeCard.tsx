@@ -8,8 +8,8 @@ const CodeCard = () => {
         <span className="h-3 w-3 rounded-full bg-amber-400" />
         <span className="h-3 w-3 rounded-full bg-emerald-400" />
       </div>
-      <div className="rounded-xl bg-[color:var(--code-bg)] p-4 text-sm text-slate-200 shadow-inner sm:text-base">
-        <pre className="font-code leading-relaxed">
+      <div className="rounded-xl bg-[color:var(--code-bg)] p-4 text-xs text-slate-200 shadow-inner sm:text-base">
+        <pre className="font-code leading-relaxed overflow-x-auto sm:overflow-x-hidden">
           <code>
             <span className="text-emerald-400">const</span>{" "}
             <span className="text-sky-300">developer</span>{" "}

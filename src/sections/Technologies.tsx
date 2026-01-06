@@ -16,6 +16,7 @@ import {
 import Container from "@/components/Container";
 import SectionHeader from "@/components/SectionHeader";
 import TechCard from "@/components/TechCard";
+import RevealOnScroll from "@/components/RevealOnScroll";
 
 const technologies = [
   { label: "React", icon: <SiReact />, iconClassName: "text-[#61dafb]" },
@@ -36,20 +37,22 @@ const TechnologiesSection = () => {
   return (
     <section id="tecnologias" className="bg-white py-12 sm:py-16">
       <Container>
-        <SectionHeader
-          title="Tecnologías"
-          subtitle="Herramientas y tecnologías con las que trabajo diariamente"
-        />
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {technologies.map((tech) => (
-            <TechCard
-              key={tech.label}
-              icon={tech.icon}
-              label={tech.label}
-              iconClassName={tech.iconClassName}
-            />
-          ))}
-        </div>
+        <RevealOnScroll direction="right">
+          <SectionHeader
+            title="Tecnologías"
+            subtitle="Herramientas y tecnologías con las que trabajo diariamente"
+          />
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            {technologies.map((tech) => (
+              <TechCard
+                key={tech.label}
+                icon={tech.icon}
+                label={tech.label}
+                iconClassName={tech.iconClassName}
+              />
+            ))}
+          </div>
+        </RevealOnScroll>
       </Container>
     </section>
   );
