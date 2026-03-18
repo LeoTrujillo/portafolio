@@ -1,30 +1,52 @@
-export const projects = [
+export type ProjectCase = {
+  title: string;
+  context: string;
+  problem: string;
+  solution: string;
+  impact: string;
+  tech: string[];
+  image: string;
+  link: string;
+};
+
+export const projects: ProjectCase[] = [
   {
     title: "Drivalbe",
-    description: "Aplicación para compra de boletos para viajes",
-    tech: ["React Native", "TypeScript", "Redux", "React", "Next", "Remix", "NestJS", "PostgreSQL"],
+    context: "Plataforma de venta de boletos y operación de viajes.",
+    problem:
+      "El producto necesitaba crecer entre web, mobile y backend sin que la experiencia se volviera inconsistente o costosa de mantener.",
+    solution:
+      "Trabajé en una base compartida orientada a producto, alineando frontend, flujos clave y decisiones técnicas para sostener evolución continua.",
+    impact:
+      "Se fortaleció la capacidad de iterar sobre nuevas funcionalidades con más consistencia, mejor experiencia y una estructura más preparada para escalar.",
+    tech: ["React Native", "TypeScript", "Redux", "Next.js"],
     image: "/images/projects/drivalbe.png",
     link: "https://drivalbe.com/",
   },
   {
-    title: "Red Clecal",
-    description: "Plataforma para el registro y automatización de citas compradores, proveedores y landing page",
-    tech: ["React", "TypeScript", "Inertia", "PHP", "Laravel", "MySQL"],
-    image: "/images/projects/redclelac.png",
-    link: "https://red.clelac.com/",
-  },
-  {
-    title: "Observatorio Técnologico de Monterrey",
-    description: "Pagina web y dashboard para administrar el contenido para el Observatorio Técnologico de Monterrey",
-    tech: ["HTML", "CSS", "Wordpress", "PHP", "MySQL"],
-    image: "/images/projects/observatorio.png",
-    link: "https://observatorio.tec.mx/",
-  },
-  {
     title: "Camino Real App",
-    description: "Aplicación movil para la reserva de habitaciones en el Hotel Camino Real",
+    context: "Aplicación móvil para reservas y experiencia digital de huéspedes.",
+    problem:
+      "La experiencia debía sentirse fluida en un flujo sensible para negocio, con una app capaz de soportar crecimiento sin fricciones visibles.",
+    solution:
+      "Optimicé el frontend móvil y el comportamiento de pantallas críticas para mejorar claridad de flujo, estabilidad y capacidad de mantenimiento.",
+    impact:
+      "El resultado fue una experiencia más confiable en reserva y navegación, con una base lista para seguir evolucionando sin degradar calidad.",
     tech: ["React Native", "TypeScript", "Redux"],
     image: "/images/projects/camino.png",
     link: "https://apps.apple.com/mx/app/camino-real-hoteles/id1658196886",
-  }
+  },
+  {
+    title: "FreshTri",
+    context: "Producto propio enfocado en experiencia digital y operación de servicios.",
+    problem:
+      "Como en muchos productos nuevos, había que validar rápido sin sacrificar una base que luego permitiera crecer con orden.",
+    solution:
+      "Diseñé la estructura frontend pensando desde el inicio en mantenibilidad, performance y una UX clara para iterar sin rehacer todo.",
+    impact:
+      "Sirve como muestra de un enfoque donde producto y arquitectura avanzan juntos, reduciendo deuda temprana y acelerando aprendizaje real.",
+    tech: ["React", "TypeScript", "Next.js", "UX"],
+    image: "/images/projects/nutri.png",
+    link: "#contacto",
+  },
 ];

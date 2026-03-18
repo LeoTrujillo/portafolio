@@ -3,12 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --brand-600: #5b5bff;
-  --brand-700: #4b4be0;
-  --brand-100: #eef0ff;
+  --brand-600: #1d4ed8;
+  --brand-700: #1e40af;
+  --brand-100: #dbeafe;
   --muted: #5b6273;
-  --border: #e6e9f4;
-  --card: #f8f9ff;
+  --border: #dbe3ee;
+  --card: #f8fafc;
   --code-bg: #111827;
 }
 

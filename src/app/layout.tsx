@@ -14,8 +14,9 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "Leo Developer - Frontend",
-  description: "Portafolio base con seccion principal y estilos reutilizables.",
+  title: "Leonardo Trujillo | Senior Frontend Engineer",
+  description:
+    "Portafolio de Leonardo Trujillo, Senior Frontend Engineer especializado en React, TypeScript, performance y arquitectura frontend para productos escalables.",
 };
 
 export default function RootLayout({

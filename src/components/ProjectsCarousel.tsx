@@ -3,17 +3,10 @@
 import React, { useEffect, useRef } from "react";
 import { animate } from "motion";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
-
-type Project = {
-  title: string;
-  description: string;
-  tech: string[];
-  image: string;
-  link: string;
-};
+import type { ProjectCase } from "@/data/projects";
 
 type ProjectsCarouselProps = {
-  projects: Project[];
+  projects: ProjectCase[];
 };
 
 const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
@@ -161,7 +154,7 @@ const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
         >
           {loopItems.map((project, index) => (
             <div
-              key={`${project.title}-${index}`}
+              key={`${project.title}-${project.link}-${index < projects.length ? "a" : "b"}`}
               className="w-[280px] shrink-0 md:w-[340px] lg:w-[380px]"
             >
               <FeaturedProjectCard project={project} />

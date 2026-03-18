@@ -11,29 +11,31 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 const FooterSection = () => {
   return (
     <footer id="contacto">
-      <RevealOnScroll direction="right">
-        <div className="bg-[color:var(--brand-600)] py-12 sm:py-16">
+      <RevealOnScroll direction="up">
+        <div className="bg-[linear-gradient(180deg,#0f172a_0%,#172554_100%)] py-20 sm:py-24">
           <Container>
-            <div className="mx-auto flex max-w-3xl flex-col items-center text-center text-white">
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                ¿Tienes un proyecto en mente?
+            <div className="mx-auto flex max-w-4xl flex-col items-center text-center text-white">
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
+                Construyamos algo que realmente funcione a largo plazo.
               </h2>
-              <p className="mt-3 text-sm text-white/80 sm:text-base">
-                Estoy disponible para proyectos freelance y oportunidades
-                laborales. ¡Hablemos!
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-lg">
+                Si tienes un producto y quieres que escale sin romperse, platiquemos. Puedo ayudarte a fortalecer la base, mejorar la experiencia y ordenar el frontend para la siguiente etapa.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <FooterContactPill
                   href="mailto:hi@leonardotrujillo.dev"
                   icon={<HiMail className="text-lg" />}
-                  label="hi@leonardotrujillo.dev"
+                  label="Enviar mensaje"
                 />
                 <FooterContactPill
                   href="tel:+522225670424"
                   icon={<FiPhoneCall className="text-lg" />}
-                  label="+52 (222) 567-0424"
+                  label="Agendar llamada"
                   variant="outline"
                 />
+              </div>
+              <div className="mt-5 text-sm text-white/70">
+                <p>Freelance, colaboraciones de largo plazo y posiciones remotas senior.</p>
               </div>
               <div className="mt-8 flex items-center gap-4">
                 <FooterSocialLink
@@ -59,12 +61,12 @@ const FooterSection = () => {
           <Container className="flex flex-col items-center justify-between gap-4 text-center text-xs sm:flex-row sm:text-left">
             <div className="flex items-center gap-3">
               <LogoBadge initials="LT" />
-              <span className="text-sm font-semibold">Leo Developer</span>
+              <span className="text-sm font-semibold">Leonardo Trujillo</span>
             </div>
             <div className="space-y-1 text-white/70 sm:text-right">
-              <p>© 2026 Leo Developer. Todos los derechos reservados.</p>
+              <p>© 2026 Leonardo Trujillo. Todos los derechos reservados.</p>
               <p>
-                Hecho con <span className="text-red-400">♥</span> y React
+                Senior Frontend Engineer especializado en producto, performance y arquitectura frontend.
               </p>
             </div>
           </Container>
