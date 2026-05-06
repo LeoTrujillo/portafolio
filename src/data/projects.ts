@@ -11,17 +11,17 @@ export type ProjectCase = {
 
 export const projects: ProjectCase[] = [
   {
-    title: "Drivalbe",
-    context: "Plataforma de venta de boletos y operación de viajes.",
+    title: "Obervatorio Tec",
+    context: "Pagina web para el Observatorio de la Universidad Tec de Monterrey.",
     problem:
-      "El producto necesitaba crecer entre web, mobile y backend sin que la experiencia se volviera inconsistente o costosa de mantener.",
+      "Desarrollar un CMS para que el personal del observatorio pudiera gestionar el contenido del sitio web.",
     solution:
-      "Trabajé en una base compartida orientada a producto, alineando frontend, flujos clave y decisiones técnicas para sostener evolución continua.",
+      "Diseñé una arquitectura frontend pensando desde el inicio en mantenibilidad, performance y una UX clara para iterar sin rehacer todo.",
     impact:
-      "Se fortaleció la capacidad de iterar sobre nuevas funcionalidades con más consistencia, mejor experiencia y una estructura más preparada para escalar.",
-    tech: ["React Native", "TypeScript", "Redux", "Next.js"],
-    image: "/images/projects/drivalbe.png",
-    link: "https://drivalbe.com/",
+      "Logramos crear un sitio web robusto y escalable que cumpliera con los requerimientos del producto y permitiera un crecimiento sostenido.",
+    tech: ["WordPress", "PHP", "UX"],
+    image: "/images/projects/observatorio.png",
+    link: "https://observatorio.tec.mx/",
   },
   {
     title: "Camino Real App",
@@ -37,16 +37,29 @@ export const projects: ProjectCase[] = [
     link: "https://apps.apple.com/mx/app/camino-real-hoteles/id1658196886",
   },
   {
-    title: "FreshTri",
-    context: "Producto propio enfocado en experiencia digital y operación de servicios.",
+    title: "Mindora",
+    context: "Plataforma para buscar ayuda profesional de salud mental.",
     problem:
-      "Como en muchos productos nuevos, había que validar rápido sin sacrificar una base que luego permitiera crecer con orden.",
+      "Desarrollar una plataforma que pudiera gestionar citas para profesionales así como registrar informacion de pacientes y llevar un seguimiento de su progreso.",
     solution:
-      "Diseñé la estructura frontend pensando desde el inicio en mantenibilidad, performance y una UX clara para iterar sin rehacer todo.",
+      "El equipo de desarrollo implementó una arquitectura modular y escalable, con un diseño centrado en el usuario y una experiencia fluida y segura.",
     impact:
-      "Sirve como muestra de un enfoque donde producto y arquitectura avanzan juntos, reduciendo deuda temprana y acelerando aprendizaje real.",
+      "Se logró desarrollar una plataforma robusta y escalable que cumpliera con los requerimientos del producto y permitiera un crecimiento sostenido.",
     tech: ["React", "TypeScript", "Next.js", "UX"],
-    image: "/images/projects/nutri.png",
-    link: "#contacto",
+    image: "/images/projects/mindora.png",
+    link: "https://mindor.app",
+  },
+  {
+    title: "Drivalbe",
+    context: "Plataforma de venta de boletos y operación de viajes.",
+    problem:
+      "El producto necesitaba crecer entre web, mobile y backend sin que la experiencia se volviera inconsistente o costosa de mantener.",
+    solution:
+      "Trabajé en una base compartida orientada a producto, alineando frontend, flujos clave y decisiones técnicas para sostener evolución continua.",
+    impact:
+      "Se fortaleció la capacidad de iterar sobre nuevas funcionalidades con más consistencia, mejor experiencia y una estructura más preparada para escalar.",
+    tech: ["React Native", "TypeScript", "Redux", "Next.js"],
+    image: "/images/projects/drivalbe.png",
+    link: "https://drivalbe.com/",
   },
 ];

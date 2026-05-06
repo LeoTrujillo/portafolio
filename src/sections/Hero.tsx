@@ -24,10 +24,10 @@ const HeroSection = () => {
               </div>
               <div className="space-y-4">
                 <h1 className="max-w-[12ch] text-4xl font-bold leading-[1.02] tracking-tight text-[color:var(--foreground)] sm:max-w-[11ch] sm:text-6xl lg:text-7xl">
-                  Construyo productos que no se rompen cuando crecen.
+                  Construyo productos digitales.
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-[color:var(--foreground)]/90 sm:text-xl">
-                  Senior Frontend Engineer con más de 15 años de experiencia ayudando a transformar ideas y MVPs en aplicaciones escalables, mantenibles y listas para producción.
+                  Senior Frontend Engineer ayudando a transformar ideas y MVPs en aplicaciones escalables, mantenibles y listas para producción.
                 </p>
                 <p className="max-w-xl text-sm leading-7 text-[color:var(--muted)] sm:text-lg">
                   Especializado en React, TypeScript, performance y arquitectura frontend para equipos que necesitan avanzar rápido sin romper la base del producto.
